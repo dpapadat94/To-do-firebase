@@ -13,14 +13,14 @@ import {
 } from "firebase/firestore";
 
 const style = {
-  bg: `  h-screen w-screen bg-slate-100	`,
-  container: `bg-white w-2/4 min-w-fit  mt-12 m-auto  rounded-md shadow-xl p-4`,
-  heading: `text-3xl font-bold p-3 text-center text-gray-800 shadow-xl p-6 bg-white`,
+  bg: ` h-screen w-screen bg-[#8f43ee]`,
+  container: `bg-[#0B2447] w-2/4 min-w-fit  mt-12 m-auto  rounded-md shadow-2xl shadow-[#222831] p-4`,
+  heading: `text-3xl font-bold p-3 text-center text-white shadow-xl p-3 bg-[#0B2447] drop-shadow-xl`,
   form: `flex justify-between`,
-  item: `border rounded-full p-2 w-full text-xl`,
-  button: `border rounded-full p-4 ml-2 bg-blue-400 text-slate-100`,
+  item: `border-2 border-[#8F43EE] bg-transparent rounded-full p-2 w-full text-white text-xl`,
+  button: `border rounded-full p-4 ml-2 bg-[#8F43EE] text-slate-100`,
 
-  count: `text-center p-2`,
+  count: `text-center text-white p-2`,
 };
 
 function App() {
@@ -72,7 +72,7 @@ function App() {
     <div className={style.bg}>
       <h3 className={style.heading}>My To Do List</h3>
       <div className={style.container}>
-        <h2 className="mb-5">
+        <h2 className="mb-5 text-white">
           Enter tasks in field below and press the + to add to list
         </h2>
         <form onSubmit={createTodo} className={style.form}>
@@ -87,7 +87,7 @@ function App() {
             <AiOutlinePlus />
           </button>
         </form>
-        <ul>
+        <ul className="mt-10">
           {todos.map((todo, index) => (
             <Todo
               key={index}

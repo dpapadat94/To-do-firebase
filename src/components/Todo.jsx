@@ -1,10 +1,10 @@
 const style = {
-  li: `flex justify-between  bg-white p-4 my-3 capitalize border-b-2 border-slate-200`,
-  liComplete: `flex justify-between rounded-full bg-green-200 p-4 my-2 capitalize`,
-  row: `flex  items-center	`,
-  text: `ml-2  cursor-pointer`,
+  li: `flex justify-between  bg-[#8f43ee] p-4 my-4 capitalize border rounded-full  border-white`,
+  liComplete: `flex justify-between rounded-full bg-green-200 p-4 my-4 capitalize`,
+  row: `flex  items-center 	`,
+  text: `ml-2 text-white text-xl cursor-pointer`,
   textComplete: `ml-2 cursor-pointer line-through`,
-  button: `cursor-pointer text-white rounded-full py-1 px-2 bg-red-400 hover:bg-red-600 `,
+  button: `cursor-pointer text-white rounded-full py-1 px-2 bg-[#071952] border hover:bg-red-500 `,
   buttonComplete: `cursor-pointer text-white rounded-full py-1 px-2 bg-green-500 hover:bg-green-600`,
 };
 
@@ -33,7 +33,7 @@ function Todo({ todo, toggleComplete, deleteTodo }) {
           className={style.buttonComplete}
           onClick={() => deleteTodo(todo.id)}
         >
-          Clear completed
+          Click to clear task
         </button>
       )}
     </li>
